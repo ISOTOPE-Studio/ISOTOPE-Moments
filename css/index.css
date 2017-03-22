@@ -1,0 +1,140 @@
+@font-face {
+  font-family: MyriadSetPro-Semibold;
+  src: url('../font/MyriadSetPro-Semibold.ttf');
+}
+
+@font-face {
+  font-family: MyriadSetPro-Thin;
+  src: url('../font/MyriadSetPro-Thin.ttf');
+}
+
+.logo {
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  width: 100vw;
+  background-color: rgba(30, 144, 255, 1);
+  z-index: 1000;
+  position: fixed;
+}
+
+.logo svg {
+  height: 100px;
+}
+
+#Text {
+  animation: 1.5s in-right;
+  animation-delay: .9s;
+  animation-fill-mode: forwards;
+  transform: translateX(-2000px);
+  opacity: 0;
+}
+
+#Icon {
+  animation: 1.5s in-left;
+  transform: translateX(500px);
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.header-2 {
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+  display: block;
+  text-align: right;
+  color: white;
+}
+
+.hero {
+  z-index: -999;
+  height: 500px;
+  background-color: rgba(30, 144, 255, 1);
+  padding-top: 150px;
+  text-align: left;
+  color: white;
+  line-height: 10;
+  font-family: "MyriadSetPro-Thin";
+}
+
+.hero h1 {
+  line-height: 2;
+}
+
+.more-btn {
+  text-align: center;
+}
+
+.more-btn span {
+  background-color: yellow;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  display: inline-block;
+  background-origin: border-box;
+  line-height: 50px;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.09), 0 8px 17px 0 rgba(0, 0, 0, 0.08);
+  transition-duration: 0.5s;
+}
+
+.more-btn span:hover {
+  transform: scale(1.2);
+  transition-duration: 0.1s;
+  box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.12), 0 12px 15px 0 rgba(0, 0, 0, 0.14)
+}
+
+.more-btn img {
+  width: 16px;
+  text-align: center;
+}
+
+.section-1 img {
+  /*
+  height: 750px;
+  background: url('../img/hero 2.jpg') center no-repeat;
+*/
+  width: 100%
+}
+
+footer {
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  line-height: .1;
+  background-color: dodgerblue;
+}
+
+@keyframes in-right {
+  0% {
+    transform: translateX(-2000px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes in-left {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@media (max-width: 900px) {
+  .header-2 {
+    display: none;
+  }
+  .hero {
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 1.5em;
+  }
+}
